@@ -148,7 +148,7 @@ const Home = () => {
             </div>
           </Fade>
         </div>
-        <div className="absolute flex  sm:flex-col flex-row items-end bottom-3  sm:justify-end justify-center w-full h-full gap-3 z-10">
+        <div className="absolute flex z-30  sm:flex-col flex-row items-end bottom-3  sm:justify-end justify-center w-full h-full gap-3 z-10">
           <span className="lg:text-xl md:text-lg sm:text-base text-sm text-masala hover:text-spicymix transition-all duration-150 ease-linear">
             <Link to="https://github.com/Zakir-1995" target="_blank">
               {" "}
