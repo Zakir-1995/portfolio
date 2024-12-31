@@ -33,7 +33,7 @@ const Contact = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        "http://localhost:8080/api/contact/message",
+        "https://portfolio-backend-tgzk.onrender.com/api/contact/message",
         {
           method: "POST",
           headers: {
