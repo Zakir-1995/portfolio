@@ -33,7 +33,7 @@ const CreateBlog = () => {
 
     try {
       setLoading(true);
-      const res = await fetch(`http://localhost:8080/api/blog/create`, {
+      const res = await fetch(`https://portfolio-backend-tgzk.onrender.com/api/blog/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
