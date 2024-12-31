@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SkillBar from "../components/Skillbar";
+import SkillBar from "../components/SkillBar";
 import TestimonialCarousel from "../components/TestmonialCarousel";
 import { motion } from "framer-motion";
 
