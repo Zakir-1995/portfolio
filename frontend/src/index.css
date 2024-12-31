@@ -28,5 +28,5 @@
   }
 
 .leaflet-default-icon-path {
-    background-image: url(https://unpkg.com/leaflet@1.8.0/dist/images/marker-icon.png);
+    background-image: url("/marker-icon.png");
 }
