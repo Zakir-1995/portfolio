@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json({ limit: "50mb" }));
 
-const whitelist = ["http://localhost:5173"];
+const whitelist = ["https://portfolio-hgua.onrender.com"];
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -41,7 +41,7 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
   credentials: true,
   optionsSuccessStatus: 200,
-  origin: ["http://localhost:5173"],
+  origin: ["https://portfolio-hgua.onrender.com"],
 };
 
 app.use(cors(corsOptions));
