@@ -8,7 +8,7 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
     const getAllBlog = async () => {
-      const res = await fetch("http://localhost:8080/api/blog/blogs");
+      const res = await fetch("https://portfolio-backend-tgzk.onrender.com/api/blog/blogs");
       const data = await res.json();
       if (data.success) {
         setBlogs(data.data);
