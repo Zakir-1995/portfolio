@@ -1,5 +1,6 @@
 import { Marker, Popup } from "react-leaflet";
-import PropTypes from "prop-types";
+import "leaflet/dist/leaflet.css";
+/* eslint-disable react/prop-types */
 const Pin = ({ item }) => {
   const position = [item.latitude, item.longitude];
   return (
@@ -23,6 +24,3 @@ const Pin = ({ item }) => {
 
 export default Pin;
 
-Pin.propTypes = {
-  item: PropTypes.array,
-};
