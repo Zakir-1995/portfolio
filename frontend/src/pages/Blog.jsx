@@ -6,13 +6,16 @@ const Blog = () => {
   const [openinfo, setOpenInfo] = useState(false);
   const [cardId, setCardId] = useState("");
   const [blogs, setBlogs] = useState([]);
+  const [loading,setLoading] = useState(false)
   useEffect(() => {
     const getAllBlog = async () => {
+      setLoading(true)
       const res = await fetch(
         "https://portfolio-backend-tgzk.onrender.com/api/blog/blogs"
       );
       const data = await res.json();
       if (data.success) {
+         setLoading(false)
         setBlogs(data.data);
       }
     };
@@ -62,7 +65,12 @@ const Blog = () => {
             </ul>
         
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-5">
+          {loading ? (
+        <div className="flex justify-center items-center w-full h-full">
+        <p>Loading...</p>
+        </div>
+          ) : (
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-5">
             {blogs.map((blog) => (
               <div
                 key={blog._id}
@@ -114,6 +122,7 @@ const Blog = () => {
               </div>
             ))}
           </div>
+          )}
         </div>
       </motion.div>
     </>
